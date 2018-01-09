@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+   
+
+<div ng-controller="shashiCtr">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>id</th>
+                <th>photo</th>
+                <th>Runs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="player in players">
+                <td>{{player.login}}</td>
+                <td>{{player.id}}</td>
+                <td><img ng-src="{{player.avatar_url}}" /></td>
+                <td>{{player.html_url}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
