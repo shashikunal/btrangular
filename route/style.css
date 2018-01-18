@@ -1,3 +1,10 @@
 .test input {
     margin: 10px;
 }
+
+input.ng-touched.ng-invalid  , textarea.ng-touched.ng-invalid  {
+    border:1px solid red;
+}
+input.ng-touched.ng-valid , textarea.ng-touched.ng-valid {
+    border:1px solid green;
+}

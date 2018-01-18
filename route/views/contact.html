@@ -1,0 +1,26 @@
+
+{{contact}}
+
+<form class="form-group" action="#" method="get" name="contactForm" novalidate>
+<div>
+    <input class="form-control" type="text" name="name" id="name" ng-model="contact.name" placeholder="enter a name" ng-required="true">
+    <P ng-show="contactForm.name.$touched && contactForm.name.$invalid"><small style="color:red; display:block;">Please enter valid input</small></P>
+</div>
+<div>
+    <input class="form-control" type="email" name="email" id="email" ng-model="contact.email" placeholder="enter an email" ng-required="true">
+    <P ng-show="contactForm.email.$touched && contactForm.email.$invalid"><small style="color:red; display:block;">Please enter valid email</small></P>
+</div>
+<div>
+    <input class="form-control" type="number" name="number" id="number" ng-model="contact.number" placeholder="enter a number" ng-required="true">
+    <P ng-show="contactForm.number.$touched && contactForm.number.$invalid"><small style="color:red; display:block;">Please enter valid number</small></P>
+</div>
+<div>
+   <textarea name="description" id="description" cols="30" rows="10" class="form-control" ng-model="contact.description" ng-required="true">
+        <P ng-show="contactForm.number.$touched && contactForm.number.$invalid"><small style="color:red; display:block;">Please enter valid number</small></P>
+   </textarea>
+</div>
+ 
+<div>
+    <input type="submit" value="submit" class="btn btn-info">
+</div>
+</form>
